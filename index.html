@@ -1,0 +1,151 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script>
+    <script src="https://d3js.org/d3-random.v1.min.js"></script>
+
+    <script language="javascript" type="text/javascript" src="p5.func.js"></script>
+    <script type="text/javascript" src="LZWEncoder.js"></script>
+    <script type="text/javascript" src="NeuQuant.js"></script>
+    <script type="text/javascript" src="GIFEncoder.js"></script>
+    <script type="text/javascript" src="b64.js"></script>
+    <script type="text/javascript" src="z_recorder.js"></script>
+    <script language="javascript" type="text/javascript" src="simplex-noise.js"></script>
+    <script language="javascript" type="text/javascript" src="canvas_size.js"></script>
+    <script language="javascript" type="text/javascript" src="draw_one_frame.js"></script>
+
+    <script src="z_clmtrackr.js"></script>
+    <script src="z_model_pca_20_svm.js"></script>
+    <script language="javascript" type="text/javascript" src="z_purview_helper.js"></script>
+    <script language="javascript" type="text/javascript" src="z_focused_random.js"></script>
+    <script language="javascript" type="text/javascript" src="z_face_system.js"></script>
+    <script language="javascript" type="text/javascript" src="z_kdTree.js"></script>
+    <script language="javascript" type="text/javascript" src="z_face-api.js"></script>
+    <script language="javascript" type="text/javascript" src="z_training_images.js"></script>
+    <script language="javascript" type="text/javascript" src="z_testing_images.js"></script>
+    <script language="javascript" type="text/javascript" src="face.js"></script>
+    <script language="javascript" type="text/javascript" src="system_runner.js"></script>
+
+    <style>
+        body   { padding: 0; margin: 0; }
+        .inner { position: absolute; }
+        #controls {
+            font: 300 12px "Helvetica Neue";
+            padding: 5;
+            margin: 5;
+            background: #f0f0f0;
+            opacity: 0.0;
+            -webkit-transition: opacity 0.2s ease;
+            -moz-transition: opacity 0.2s ease;
+            -o-transition: opacity 0.2s ease;
+            -ms-transition: opacity 0.2s ease;
+        }
+        #controls:hover { opacity: 0.9; }
+    </style>
+
+</head>
+<body style="background-color:white">
+    <div class="outer">
+        <div class="inner" id="controls" height="500">
+            <table>
+                <tr>
+                    <td>setting 1</td>
+                    <td id="slider1Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 2</td>
+                    <td id="slider2Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 3</td>
+                    <td id="slider3Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 4</td>
+                    <td id="slider4Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 5</td>
+                    <td id="slider5Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 6</td>
+                    <td id="slider6Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 7</td>
+                    <td id="slider7Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 8</td>
+                    <td id="slider8Container"></td>
+                </tr>
+                <!-- YOU CAN ADD MORE SLIDERS HERE, LIKE THIS
+                <tr>
+                    <td>setting 9</td>
+                    <td id="slider9Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 10</td>
+                    <td id="slider10Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 11</td>
+                    <td id="slider11Container"></td>
+                </tr>
+                <tr>
+                    <td>setting 12</td>
+                    <td id="slider12Container"></td>
+                </tr>
+                ... AND KEEP GOING
+                 -->
+                <tr>
+                </tr>
+                <tr>
+                    <td>show target</td>
+                    <td id="sliderTintContainer"></td>
+                </tr>
+                <tr>
+                    <td>Draw function</td>
+                    <td id="selector1Container"></td>
+                </tr>
+                <tr>
+                    <td>Face Draw</td>
+                    <td id="checkbox1Container"></td>
+                </tr>
+                <tr>
+                    <td>Face Targets</td>
+                    <td id="checkbox2Container"></td>
+                </tr>
+                <tr>
+                    <td>Face Points</td>
+                    <td id="checkbox3Container"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="button1Container"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="button2Container"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="button3Container"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="button4Container"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <div id="canvasContainer"></div>
+<a href="face.js">face code</a><br>
+<a href="sketch.html">sketches</a>
+        </div>
+    </div>
+    <pre>
+        <p id="output">
+        </p>
+    </pre>
+</body>
